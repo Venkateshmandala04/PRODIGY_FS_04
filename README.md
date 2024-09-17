@@ -1,61 +1,95 @@
-# PRODIGY_FS_04
+# Prodigy_FS_04 Real-Time Chat Website
 
-# Local Store E-commerce Platform
-
-This project is a *Local Store E-commerce Platform* designed to help local businesses bring their products online. The platform allows customers to browse products, place orders, and make payments while providing store owners with a simple interface to manage inventory, orders, and customer details.
+Welcome to the *Real-Time Chat Website*! This project is a robust chat application built with the MERN stack (MongoDB, Express.js, React.js, and Node.js), along with Socket.io for real-time communication, Redux Toolkit for state management, and Tailwind CSS for styling.
 
 ## Features
 
-- *Product Catalog*: Browse products with detailed descriptions and pricing.
-- *Cart and Checkout*: Add items to the cart and complete the checkout process.
-- *Inventory Management*: Store owners can manage stock, add new products, and update listings.
-- *Order Management*: View and manage customer orders, update order statuses, and track deliveries.
-- *Payment Integration*: Secure payment handling for customer transactions.
-- *User Authentication*: Secure login and registration for both customers and store owners.
-- *Responsive Design*: Optimized for both desktop and mobile devices.
+- *Real-time Chat*: Send and receive messages instantly with other users.
+- *User Authentication*: Sign up, log in, and log out using JWT and Google Authentication.
+- *Group Creation*: Create chat rooms and invite others to join.
+- *Notifications*: Receive alerts for new messages.
+- *Emojis*: Add emojis to your messages.
+- *Profile Page*: Update your avatar and display name.
+- *Search Functionality*: Easily find and connect with users.
+- *Responsive Design*: Optimized for various screen sizes and devices.
 
 ## Technologies Used
 
-- *Ruby on Rails*: Backend framework to build the entire application.
-- *HTML & CSS*: Frontend for creating user interfaces.
-- *JavaScript*: Enhancing user experience with dynamic behavior.
-- *SQLite3*: Default database for local development.
-- *PostgreSQL*: For production deployment.
-- *Devise*: Authentication system for users.
+- *MERN Stack*: MongoDB, Express.js, React.js, Node.js
+- *Socket.io*: Real-time communication
+- *Redux Toolkit*: State management
+- *Tailwind CSS*: Styling
 
-## Installation
+## Configuration and Setup
 
-1. Clone the repository:
+To run this project locally, follow these steps:
+
+1. *Clone the Repository*
+
    bash
-   git clone https://github.com/yourusername/local-store-ecommerce.git
-   
-2. Navigate to the project directory:
-   bash
-   cd local-store-ecommerce
-   
-3. Install required gems:
-   bash
-   bundle install
-   
-4. Set up the database:
-   bash
-   rails db:create
-   rails db:migrate
-   
-5. Start the Rails server:
-   bash
-   rails server
+   git clone https://github.com/yourusername/real-time-chat-website.git
    
 
-## Usage
+2. *Set Up the Client*
 
-1. Open your browser and visit http://localhost:3000/.
-2. Register as a customer or store owner.
-3. As a customer, browse through the product catalog, add items to the cart, and place an order.
-4. As a store owner, manage product listings, update inventory, and track orders.
+   - Navigate to the client directory:
+     bash
+     cd real-time-chat-website/client
+     
 
-## Future Enhancements
+   - Create a .env file in the root of the client directory and add the following:
+     
+     REACT_APP_GOOGLE_CLIENT_ID=<Your_Google_Client_ID>
+     REACT_APP_SERVER_URL='http://localhost:8000'
+     
 
-- Add customer reviews and ratings for products.
-- Introduce a product recommendation system based on user preferences.
-- Support multiple local stores with individual admin access.
+   - Get your Google Client ID by creating a new OAuth Client ID on the [Google Credentials Page](https://console.developers.google.com/apis/credentials). Set up the OAuth client with the following redirect URLs:
+     - http://localhost:3000
+     - http://localhost:3000/login
+
+   - Install client-side dependencies and start the client:
+     bash
+     npm install
+     npm start
+     
+
+3. *Set Up the Server*
+
+   - Navigate to the server directory:
+     bash
+     cd real-time-chat-website/server
+     
+
+   - Create a .env file in the root of the server directory and add the following:
+     
+     PORT=8000
+     URL=<Your_Database_URL>
+     SECRET=<Your_Secret_Key>
+     CLIENT_ID=<Your_Google_Client_ID>
+     BASE_URL="http://localhost:3000"
+     
+
+   - Install server-side dependencies and start the server:
+     bash
+     npm install
+     npm start
+     
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature:
+   bash
+   git checkout -b my-new-feature
+   
+3. Make changes and commit them:
+   bash
+   git commit -m 'Add some feature'
+   
+4. Push your branch to your forked repository:
+   bash
+   git push origin my-new-feature
+   
+5. Create a Pull Request.

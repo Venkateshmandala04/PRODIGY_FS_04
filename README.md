@@ -1,95 +1,83 @@
-# Prodigy_FS_04 Real-Time Chat Website
+# Real-Time Chat Website with MERN Stack, Socket.io, Redux Toolkit, and Tailwind CSS
 
-Welcome to the *Real-Time Chat Website*! This project is a robust chat application built with the MERN stack (MongoDB, Express.js, React.js, and Node.js), along with Socket.io for real-time communication, Redux Toolkit for state management, and Tailwind CSS for styling.
+This is a real-time chat website that allows users to connect with each other and chat in real-time. It was built using the MERN stack (MongoDB, Express.js, React.js, and Node.js), Socket.io, Redux Toolkit, and Tailwind CSS. 
 
-## Features
-
-- *Real-time Chat*: Send and receive messages instantly with other users.
-- *User Authentication*: Sign up, log in, and log out using JWT and Google Authentication.
-- *Group Creation*: Create chat rooms and invite others to join.
-- *Notifications*: Receive alerts for new messages.
-- *Emojis*: Add emojis to your messages.
-- *Profile Page*: Update your avatar and display name.
-- *Search Functionality*: Easily find and connect with users.
-- *Responsive Design*: Optimized for various screen sizes and devices.
+- If you liked it then give this Repository a Star⭐
+- Youtube Demo : <a target="__blanck" href="https://youtu.be/11oZj2jBhOE">Click On Me</a>
 
 ## Technologies Used
 
-- *MERN Stack*: MongoDB, Express.js, React.js, Node.js
-- *Socket.io*: Real-time communication
-- *Redux Toolkit*: State management
-- *Tailwind CSS*: Styling
+- MERN stack (MongoDB, Express.js, React.js, and Node.js)
+- Socket.io
+- Redux Toolkit
+- Tailwind CSS
+
+## Features
+
+- Real-time chat: users can send and receive messages in real-time
+- User authentication: users can sign up, log in, and log out using JWT and Google Auth
+- Group creation: users can create chat rooms and invite others to join
+- Notifications: users can receive notifications on new messages
+- Emojis: users can send and receive emojis in messages
+- Profile page where users can update their avatar and display name.
+- Users can create a room to chat with others.
+- Search functionality.
+- Responsive design: the website is optimized for different screen sizes and devices
 
 ## Configuration and Setup
+In order to run this project locally, simply fork and clone the repository or download as zip and unzip on your machine.
 
-To run this project locally, follow these steps:
+- Open the project in your prefered code editor.
+- Go to terminal -> New terminal (If you are using VS code)
+- Split your terminal into two (run the client on one terminal and the server on the other terminal)
 
-1. *Clone the Repository*
+In the first terminal
+- cd client and create a .env file in the root of your client directory.
+- Supply the following credentials
 
-   bash
-   git clone https://github.com/yourusername/real-time-chat-website.git
-   
+```
+REACT_APP_GOOGLE_CLIENT_ID = 
+REACT_APP_SERVER_URL='http://localhost:8000'
+```
 
-2. *Set Up the Client*
+To get your Google ClientID for authentication, go to the [credential Page ](https://console.cloud.google.com/apis/credentials) (if you are new, then [create a new project first](https://console.cloud.google.com/projectcreate) and follow the following steps;
 
-   - Navigate to the client directory:
-     bash
-     cd real-time-chat-website/client
-     
+- Click Create credentials > OAuth client ID.
+- Select the Web application type.
+- Name your OAuth client and click Create
+- Remember to provide your domain and redirect URL so that Google identifies the origin domain to which it can display the consent screen. In development, that is going to be `http://localhost:3000` and `http://localhost:3000/login`
+- Copy the Client ID and assign it to the variable `REACT_APP_GOOGLE_CLIENT_ID` in your .env file
 
-   - Create a .env file in the root of the client directory and add the following:
-     
-     REACT_APP_GOOGLE_CLIENT_ID=<Your_Google_Client_ID>
-     REACT_APP_SERVER_URL='http://localhost:8000'
-     
+```
+$ cd client
+$ npm install (to install client-side dependencies)
+$ npm start (to start the client)
+```
+In the second terminal
+- cd server and create a .env file in the root of your server directory.
+- Supply the following credentials
 
-   - Get your Google Client ID by creating a new OAuth Client ID on the [Google Credentials Page](https://console.developers.google.com/apis/credentials). Set up the OAuth client with the following redirect URLs:
-     - http://localhost:3000
-     - http://localhost:3000/login
+```
+PORT=8000
+URL=
+SECRET=
+CLIENT_ID=
+BASE_URL="http://localhost:3000"
+```
+```
+$ cd server
+$ npm install (to install server-side dependencies)
+& npm start (to start the server)
+```
 
-   - Install client-side dependencies and start the client:
-     bash
-     npm install
-     npm start
-     
-
-3. *Set Up the Server*
-
-   - Navigate to the server directory:
-     bash
-     cd real-time-chat-website/server
-     
-
-   - Create a .env file in the root of the server directory and add the following:
-     
-     PORT=8000
-     URL=<Your_Database_URL>
-     SECRET=<Your_Secret_Key>
-     CLIENT_ID=<Your_Google_Client_ID>
-     BASE_URL="http://localhost:3000"
-     
-
-   - Install server-side dependencies and start the server:
-     bash
-     npm install
-     npm start
-     
 
 ## Contributing
 
-Contributions are welcome! To contribute:
+Contributions to this project are welcome! If you find a bug or want to add a feature, please submit an issue or a pull request. To contribute, follow these steps:
 
-1. Fork the repository.
-2. Create a new branch for your feature:
-   bash
-   git checkout -b my-new-feature
-   
-3. Make changes and commit them:
-   bash
-   git commit -m 'Add some feature'
-   
-4. Push your branch to your forked repository:
-   bash
-   git push origin my-new-feature
-   
-5. Create a Pull Request.
+1. Fork the repository
+2. Create a new branch for your feature: `git checkout -b my-new-feature`
+3. Make changes and commit them: `git commit -m 'Add some feature'`
+4. Push your branch to your forked repository: `git push origin my-new-feature`
+5. Create a Pull Request
+
